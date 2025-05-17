@@ -1,10 +1,10 @@
 "use client"
-
+import type { JSX } from "react"
 import { motion } from "framer-motion"
 
 interface SkillCardProps {
   name: string
-  icon: string
+  icon: JSX.Element
   index: number
 }
 
