@@ -37,7 +37,6 @@ const projects: Project[] = [
 
 
 const typingTexts = [
-  "I speak fluent YAML",
   "I tame servers with Kubernetes and Ubuntu",
   "I automate my laziness into productivity",
   "My birthday is October 5th — mark your calendars 🐙",
