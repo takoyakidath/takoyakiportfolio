@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Twitter, MessageCircle } from "lucide-react"
+import { FaDiscord,FaTwitter,FaGithub } from "react-icons/fa";
 
 export function ContactSection() {
   return (
@@ -24,7 +24,7 @@ export function ContactSection() {
               whileTap={{ scale: 0.95 }}
               className="p-3 rounded-full bg-background shadow-md"
             >
-              <Github className="h-6 w-6" />
+              <FaGithub className="h-6 w-6" />
               <span className="sr-only">GitHub</span>
             </motion.a>
             <motion.a
@@ -35,7 +35,7 @@ export function ContactSection() {
               whileTap={{ scale: 0.95 }}
               className="p-3 rounded-full bg-background shadow-md"
             >
-              <Twitter className="h-6 w-6" />
+              <FaTwitter className="h-6 w-6" />
               <span className="sr-only">Twitter</span>
             </motion.a>
             <motion.a
@@ -46,7 +46,7 @@ export function ContactSection() {
               whileTap={{ scale: 0.95 }}
               className="p-3 rounded-full bg-background shadow-md"
             >
-              <MessageCircle className="h-6 w-6" />
+              <FaDiscord className="h-6 w-6" />
               <span className="sr-only">Discord</span>
             </motion.a>
           </div>
