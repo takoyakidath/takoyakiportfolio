@@ -38,10 +38,11 @@ const projects: Project[] = [
 
 const typingTexts = [
   "I tame servers with Kubernetes and Ubuntu",
-  "I automate my laziness into productivity",
+  "I let shell scripts and Python handle all the boring stuff",
   "My birthday is October 5th — mark your calendars 🐙",
-  "I turn everyday problems into side projects",
+  "I'm automating my life, one API call at a time",
 ]
+
 
 
   return (
