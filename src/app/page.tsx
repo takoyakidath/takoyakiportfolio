@@ -32,6 +32,15 @@ const projects: Project[] = [
     techStack: ["Next.js", "TypeScript", "Supabase", "shadcn/ui"],
     image: "/projects/triplewin.png", 
     URL: "https://triplewin.pkopko.jp"
+  },
+    {
+    id: 2,
+    title: "EarthRader",
+    description: "EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.",
+    shortDescription: "japanese earthquake information app",
+    techStack: ["Next.js", "TypeScript", "Leaflet"],
+    image: "/projects/earthrader.png", 
+    URL: "https://earthrader.pkopko.jp"
   }
 ]
 
