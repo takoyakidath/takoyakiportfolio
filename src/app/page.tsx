@@ -33,7 +33,16 @@ export default function Home() {
         </div>
       </div>
       <div className="h-screen">
-
+      <div>skill</div>
+      </div>
+      <div className="h-screen">
+        <div >Projects</div>
+      </div>
+      <div className="h-screen">
+        <div>contact</div>
+      </div>
+      <div className="h-screen">
+        <div>footer</div>
       </div>
     </div>
   );
