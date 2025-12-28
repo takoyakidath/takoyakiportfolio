@@ -37,13 +37,61 @@ export default function Home() {
         <div className="flex flex-col items-center gap-8 md:gap-12 w-full max-w-7xl">
           <div className="text-4xl md:text-6xl lg:text-8xl font-bold">Skills</div>
           <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 text-lg md:text-xl lg:text-2xl">
-            <div className="px-4 py-2 bg-gray-100 rounded">React</div>
-            <div className="px-4 py-2 bg-gray-100 rounded">TypeScript</div>
-            <div className="px-4 py-2 bg-gray-100 rounded">Next.js</div>
-            <div className="px-4 py-2 bg-gray-100 rounded">Node.js</div>
-            <div className="px-4 py-2 bg-gray-100 rounded">Python</div>
-            <div className="px-4 py-2 bg-gray-100 rounded">JavaScript</div>
+          <div className="w-full max-w-4xl flex flex-col gap-6 md:gap-8">
+            <div className="w-full">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-lg md:text-xl lg:text-2xl font-semibold">React</span>
+                <span className="text-base md:text-lg text-gray-600">85%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
+                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '85%' }}></div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-lg md:text-xl lg:text-2xl font-semibold">TypeScript</span>
+                <span className="text-base md:text-lg text-gray-600">80%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
+                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '80%' }}></div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-lg md:text-xl lg:text-2xl font-semibold">Next.js</span>
+                <span className="text-base md:text-lg text-gray-600">75%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
+                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '75%' }}></div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-lg md:text-xl lg:text-2xl font-semibold">Node.js</span>
+                <span className="text-base md:text-lg text-gray-600">70%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
+                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '70%' }}></div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-lg md:text-xl lg:text-2xl font-semibold">Python</span>
+                <span className="text-base md:text-lg text-gray-600">65%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
+                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '65%' }}></div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-lg md:text-xl lg:text-2xl font-semibold">JavaScript</span>
+                <span className="text-base md:text-lg text-gray-600">90%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
+                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '90%' }}></div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center font-bold">
