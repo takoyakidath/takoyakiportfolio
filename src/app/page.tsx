@@ -37,60 +37,180 @@ export default function Home() {
         <div className="flex flex-col items-center gap-8 md:gap-12 w-full max-w-7xl">
           <div className="text-4xl md:text-6xl lg:text-8xl font-bold">Skills</div>
           <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
-          <div className="w-full max-w-4xl flex flex-col gap-6 md:gap-8">
-            <div className="w-full">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-lg md:text-xl lg:text-2xl font-semibold">React</span>
-                <span className="text-base md:text-lg text-gray-600">85%</span>
+          <div className="w-full max-w-6xl flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-16">
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+                <svg className="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#e5e7eb"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#4b5563"
+                    strokeWidth="8"
+                    strokeDasharray={`${2 * Math.PI * 40}`}
+                    strokeDashoffset={`${2 * Math.PI * 40 * (1 - 0.85)}`}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xl md:text-2xl lg:text-3xl font-bold">85%</span>
+                </div>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
-                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '85%' }}></div>
-              </div>
+              <span className="text-lg md:text-xl lg:text-2xl font-semibold">Linux</span>
             </div>
-            <div className="w-full">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-lg md:text-xl lg:text-2xl font-semibold">TypeScript</span>
-                <span className="text-base md:text-lg text-gray-600">80%</span>
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+                <svg className="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#e5e7eb"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#4b5563"
+                    strokeWidth="8"
+                    strokeDasharray={`${2 * Math.PI * 40}`}
+                    strokeDashoffset={`${2 * Math.PI * 40 * (1 - 0.80)}`}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xl md:text-2xl lg:text-3xl font-bold">80%</span>
+                </div>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
-                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '80%' }}></div>
-              </div>
+              <span className="text-lg md:text-xl lg:text-2xl font-semibold">TypeScript</span>
             </div>
-            <div className="w-full">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-lg md:text-xl lg:text-2xl font-semibold">Next.js</span>
-                <span className="text-base md:text-lg text-gray-600">75%</span>
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+                <svg className="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#e5e7eb"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#4b5563"
+                    strokeWidth="8"
+                    strokeDasharray={`${2 * Math.PI * 40}`}
+                    strokeDashoffset={`${2 * Math.PI * 40 * (1 - 0.75)}`}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xl md:text-2xl lg:text-3xl font-bold">75%</span>
+                </div>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
-                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '75%' }}></div>
-              </div>
+              <span className="text-lg md:text-xl lg:text-2xl font-semibold">Next.js</span>
             </div>
-            <div className="w-full">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-lg md:text-xl lg:text-2xl font-semibold">Node.js</span>
-                <span className="text-base md:text-lg text-gray-600">70%</span>
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+                <svg className="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#e5e7eb"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#4b5563"
+                    strokeWidth="8"
+                    strokeDasharray={`${2 * Math.PI * 40}`}
+                    strokeDashoffset={`${2 * Math.PI * 40 * (1 - 0.70)}`}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xl md:text-2xl lg:text-3xl font-bold">70%</span>
+                </div>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
-                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '70%' }}></div>
-              </div>
+              <span className="text-lg md:text-xl lg:text-2xl font-semibold">Kubernetes</span>
             </div>
-            <div className="w-full">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-lg md:text-xl lg:text-2xl font-semibold">Python</span>
-                <span className="text-base md:text-lg text-gray-600">65%</span>
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+                <svg className="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#e5e7eb"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#4b5563"
+                    strokeWidth="8"
+                    strokeDasharray={`${2 * Math.PI * 40}`}
+                    strokeDashoffset={`${2 * Math.PI * 40 * (1 - 0.65)}`}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xl md:text-2xl lg:text-3xl font-bold">65%</span>
+                </div>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
-                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '65%' }}></div>
-              </div>
+              <span className="text-lg md:text-xl lg:text-2xl font-semibold">Python</span>
             </div>
-            <div className="w-full">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-lg md:text-xl lg:text-2xl font-semibold">JavaScript</span>
-                <span className="text-base md:text-lg text-gray-600">90%</span>
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+                <svg className="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#e5e7eb"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="none"
+                    stroke="#4b5563"
+                    strokeWidth="8"
+                    strokeDasharray={`${2 * Math.PI * 40}`}
+                    strokeDashoffset={`${2 * Math.PI * 40 * (1 - 0.90)}`}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xl md:text-2xl lg:text-3xl font-bold">90%</span>
+                </div>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3 md:h-4">
-                <div className="bg-gray-600 h-3 md:h-4 rounded-full" style={{ width: '90%' }}></div>
-              </div>
+              <span className="text-lg md:text-xl lg:text-2xl font-semibold">React Native</span>
             </div>
           </div>
         </div>
