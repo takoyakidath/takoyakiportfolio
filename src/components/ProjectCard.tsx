@@ -1,5 +1,5 @@
-import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import { Github, ExternalLink } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -21,7 +21,7 @@ export function ProjectCard({
   demoUrl,
 }: ProjectCardProps) {
   return (
-    <div className="card-hover group relative p-4 sm:p-6 md:p-8 shrink-0 w-[280px] sm:w-80 md:w-96 flex flex-col items-center">
+    <div className="group relative p-4 sm:p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 shrink-0 w-[280px] sm:w-80 md:w-96 flex flex-col items-center">
       <div className="mb-4">
         <Image
           src={image}
@@ -31,10 +31,8 @@ export function ProjectCard({
           className="w-full h-40 sm:h-48 object-cover rounded-lg"
         />
       </div>
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-center">
-        {title}
-      </h3>
-      <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 wrap-break-word overflow-hidden text-center">
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-center">{title}</h3>
+      <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden text-center">
         {description}
       </p>
       <div className="flex flex-wrap gap-2 mb-4 justify-center">
@@ -66,3 +64,4 @@ export function ProjectCard({
     </div>
   );
 }
+
