@@ -33,17 +33,39 @@ export default function Home() {
           <ChevronDown className="animate-bounce" />
         </div>
       </div>
-      <div className="h-screen">
-      <div>skill</div>
+      <div className="relative h-screen flex items-center justify-center px-4 md:px-8 lg:px-16">
+        <div className="flex flex-col items-center gap-8 md:gap-12 w-full max-w-7xl">
+          <div className="text-4xl md:text-6xl lg:text-8xl font-bold">Skills</div>
+          <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 text-lg md:text-xl lg:text-2xl">
+            <div className="px-4 py-2 bg-gray-100 rounded">React</div>
+            <div className="px-4 py-2 bg-gray-100 rounded">TypeScript</div>
+            <div className="px-4 py-2 bg-gray-100 rounded">Next.js</div>
+            <div className="px-4 py-2 bg-gray-100 rounded">Node.js</div>
+            <div className="px-4 py-2 bg-gray-100 rounded">Python</div>
+            <div className="px-4 py-2 bg-gray-100 rounded">JavaScript</div>
+          </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center font-bold">
+          <span className="text-xs">Scroll down</span>
+          <ChevronDown className="animate-bounce" />
+        </div>
       </div>
-      <div className="h-screen">
+      <div className="relative h-screen">
         <div >Projects</div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center font-bold">
+          <span className="text-xs">Scroll down</span>
+          <ChevronDown className="animate-bounce" />
+        </div>
       </div>
-      <div className="h-screen">
+      <div className="relative h-screen">
         <div>contact</div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center font-bold">
+        <div className="text-xs">
+        Copyright © 2025 Ryunosuke Yoda. All rights reserved.
+
       </div>
-      <div className="h-screen">
-        <div>footer</div>
+        </div>
       </div>
     </div>
   );
