@@ -10,24 +10,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'EarthRader',
+    title: "EarthRader",
     description:
-      'EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.',
-    image: '/earthrader.png',
-    imageAlt: 'Earthrader',
-    tags: ['TypeScript', 'Next.js', 'Leaflet'],
-    githubUrl: 'https://github.com/takoyakidath/earthradar',
-    demoUrl: 'https://earthrader.pkopko.jp',
+      "EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.",
+    image: "/earthrader.png",
+    imageAlt: "Earthrader",
+    tags: ["TypeScript", "Next.js", "Leaflet"],
+    githubUrl: "https://github.com/takoyakidath/earthradar",
+    demoUrl: "https://earthrader.pkopko.jp",
   },
   {
-    title: 'Triplewin',
+    title: "Triplewin",
     description:
-      'EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.',
-    image: '/Triplewin.png',
-    imageAlt: 'Triplewin',
-    tags: ['Nextjs', 'Tailwindcss', 'Shadcn/ui'],
-    githubUrl: 'https://github.com/takoyakidath/Triplewin',
-    demoUrl: 'https://triplewin.pkopko.jp',
+      "EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.",
+    image: "/Triplewin.png",
+    imageAlt: "Triplewin",
+    tags: ["Nextjs", "Tailwindcss", "Shadcn/ui"],
+    githubUrl: "https://github.com/takoyakidath/Triplewin",
+    demoUrl: "https://triplewin.pkopko.jp",
   },
 ];
-
