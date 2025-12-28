@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from 'lucide-react';
 
 export function ScrollDown() {
   return (
@@ -8,3 +8,4 @@ export function ScrollDown() {
     </div>
   );
 }
+
