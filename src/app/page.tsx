@@ -339,7 +339,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
               <a 
-                href="mailto:your-email@example.com" 
+                href="mailto:takoyakidath@gmail.com" 
                 className="flex flex-col items-center gap-3 p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 group"
               >
                 <Mail className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 transition-colors" />
