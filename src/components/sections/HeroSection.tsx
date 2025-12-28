@@ -13,7 +13,7 @@ export function HeroSection() {
             className="object-contain"
           />
         </div>
-        <div className="section-title text-center px-2">Ryunosuke Yoda</div>
+        <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-center px-2">Ryunosuke Yoda</div>
         <div className="text-sm sm:text-base md:text-xl lg:text-2xl font-bold text-gray-400 mt-2 sm:mt-4">
           Software Engineer
         </div>
