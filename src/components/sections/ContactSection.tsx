@@ -1,6 +1,6 @@
-import { Mail, Github, Twitter } from 'lucide-react';
+import { Github, Mail, Twitter } from "lucide-react";
 
-const CONTACT_EMAIL = 'takoyakidath@gmail.com';
+const CONTACT_EMAIL = "takoyakidath@gmail.com";
 
 interface ContactLink {
   name: string;
@@ -10,13 +10,13 @@ interface ContactLink {
 
 const contactLinks: ContactLink[] = [
   {
-    name: 'GitHub',
-    url: 'https://github.com/takoyakidath',
+    name: "GitHub",
+    url: "https://github.com/takoyakidath",
     icon: Github,
   },
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/takoyakidath',
+    name: "Twitter",
+    url: "https://twitter.com/takoyakidath",
     icon: Twitter,
   },
 ];
@@ -37,7 +37,9 @@ export function ContactSection() {
               className="card-hover flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 group"
             >
               <Mail className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 transition-colors" />
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">Email</span>
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+                Email
+              </span>
             </a>
             {contactLinks.map((link) => {
               const Icon = link.icon;
@@ -50,7 +52,9 @@ export function ContactSection() {
                   className="card-hover flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 group"
                 >
                   <Icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">{link.name}</span>
+                  <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+                    {link.name}
+                  </span>
                 </a>
               );
             })}
@@ -65,4 +69,3 @@ export function ContactSection() {
     </div>
   );
 }
-

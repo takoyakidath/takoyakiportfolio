@@ -1,6 +1,5 @@
-import { ScrollDown } from "../ScrollDown";
-import { SkillProgressBar } from "../SkillProgressBar";
 import { skills } from "@/data/skills";
+import { SkillProgressBar } from "../SkillProgressBar";
 
 export function SkillsSection() {
   return (
@@ -10,11 +9,14 @@ export function SkillsSection() {
         <div className="section-divider"></div>
         <div className="w-full max-w-6xl flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-16">
           {skills.map((skill) => (
-            <SkillProgressBar key={skill.name} skill={skill.name} percentage={skill.percentage} />
+            <SkillProgressBar
+              key={skill.name}
+              skill={skill.name}
+              percentage={skill.percentage}
+            />
           ))}
         </div>
       </div>
     </div>
   );
 }
-

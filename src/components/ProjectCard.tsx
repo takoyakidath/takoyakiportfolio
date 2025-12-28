@@ -1,5 +1,5 @@
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import { Github, ExternalLink } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -31,7 +31,9 @@ export function ProjectCard({
           className="w-full h-40 sm:h-48 object-cover rounded-lg"
         />
       </div>
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-center">{title}</h3>
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-center">
+        {title}
+      </h3>
       <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 wrap-break-word overflow-hidden text-center">
         {description}
       </p>
@@ -64,4 +66,3 @@ export function ProjectCard({
     </div>
   );
 }
-
