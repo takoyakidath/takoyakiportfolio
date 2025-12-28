@@ -14,7 +14,6 @@ export function SkillsSection() {
           ))}
         </div>
       </div>
-      <ScrollDown />
     </div>
   );
 }

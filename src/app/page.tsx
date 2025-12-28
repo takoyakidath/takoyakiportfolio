@@ -9,8 +9,8 @@ export default function Home() {
     <div>
       <HeroSection />
       <AboutSection />
-      <SkillsSection />
       <ProjectsSection />
+      <SkillsSection />
       <ContactSection />
     </div>
   );
