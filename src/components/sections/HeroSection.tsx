@@ -3,7 +3,7 @@ import { ScrollDown } from "../ScrollDown";
 
 export function HeroSection() {
   return (
-    <div className="section-container">
+    <div className="relative h-screen px-4">
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 relative mb-4 sm:mb-6">
           <Image 
