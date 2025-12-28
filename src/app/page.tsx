@@ -227,7 +227,7 @@ export default function Home() {
             <div className="flex gap-6 md:gap-8 pb-4">
               <div className="group relative p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 shrink-0 w-80 md:w-96">
                 <div className="mb-4">
-                  <Image src="/takoyaki.png" alt="Project 1" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
+                  <Image src="/earthrader.png" alt="Earthrader" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-3">EarthRader</h3>
                 <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
@@ -251,71 +251,23 @@ export default function Home() {
               </div>
               <div className="group relative p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 shrink-0 w-80 md:w-96">
                 <div className="mb-4">
-                  <Image src="/takoyaki.png" alt="Project 2" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
+                  <Image src="/Triplewin.png" alt="Triplewin" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Project 2</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">Triplewin</h3>
                 <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
-                  Description of the project goes here. This is a sample project card.
+                EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Python</span>
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">FastAPI</span>
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Docker</span>
+                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Nextjs</span>
+                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Tailwindcss</span>
+                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Shadcn/ui</span>
                 </div>
                 <div className="flex gap-4">
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+                  <a href="https://github.com/takoyakidath/Triplewin" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
                     <Github size={20} />
                     <span className="text-sm">GitHub</span>
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
-                    <ExternalLink size={20} />
-                    <span className="text-sm">Demo</span>
-                  </a>
-                </div>
-              </div>
-              <div className="group relative p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 shrink-0 w-80 md:w-96">
-                <div className="mb-4">
-                  <Image src="/takoyaki.png" alt="Project 3" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Project 3</h3>
-                <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
-                  Description of the project goes here. This is a sample project card.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">React Native</span>
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">TypeScript</span>
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Expo</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
-                    <Github size={20} />
-                    <span className="text-sm">GitHub</span>
-                  </a>
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
-                    <ExternalLink size={20} />
-                    <span className="text-sm">Demo</span>
-                  </a>
-                </div>
-              </div>
-              <div className="group relative p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 shrink-0 w-80 md:w-96">
-                <div className="mb-4">
-                  <Image src="/takoyaki.png" alt="Project 4" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Project 4</h3>
-                <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
-                  Description of the project goes here. This is a sample project card.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Kubernetes</span>
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Go</span>
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Linux</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
-                    <Github size={20} />
-                    <span className="text-sm">GitHub</span>
-                  </a>
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+                  <a href="https://triplewin.pkopko.jp" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
                     <ExternalLink size={20} />
                     <span className="text-sm">Demo</span>
                   </a>
