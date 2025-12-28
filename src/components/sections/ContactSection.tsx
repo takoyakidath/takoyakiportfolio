@@ -1,0 +1,68 @@
+import { Mail, Github, Twitter } from 'lucide-react';
+
+const CONTACT_EMAIL = 'takoyakidath@gmail.com';
+
+interface ContactLink {
+  name: string;
+  url: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const contactLinks: ContactLink[] = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/takoyakidath',
+    icon: Github,
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/takoyakidath',
+    icon: Twitter,
+  },
+];
+
+export function ContactSection() {
+  return (
+    <div className="relative h-screen flex items-center justify-center px-4 md:px-8 lg:px-16">
+      <div className="flex flex-col items-center gap-8 md:gap-12 w-full max-w-7xl">
+        <div className="text-4xl md:text-6xl lg:text-8xl font-bold">Contact</div>
+        <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
+        <div className="flex flex-col items-center gap-6 md:gap-8">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-400 text-center">
+            Let's get in touch!
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="flex flex-col items-center gap-3 p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 group"
+            >
+              <Mail className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 transition-colors" />
+              <span className="text-base md:text-lg lg:text-xl font-semibold">Email</span>
+            </a>
+            {contactLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-3 p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 group"
+                >
+                  <Icon className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <span className="text-base md:text-lg lg:text-xl font-semibold">{link.name}</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center font-bold">
+        <div className="text-xs">
+          Copyright © 2025 Ryunosuke Yoda. All rights reserved.
+        </div>
+      </div>
+    </div>
+  );
+}
+
