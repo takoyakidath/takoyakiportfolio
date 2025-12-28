@@ -18,7 +18,6 @@ export function HeroSection() {
           Software Engineer
         </div>
       </div>
-      <ScrollDown />
     </div>
   );
 }

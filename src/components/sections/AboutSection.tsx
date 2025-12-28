@@ -14,7 +14,6 @@ export function AboutSection() {
           <div>Born: October 5th, 2010</div>
         </div>
       </div>
-      <ScrollDown />
     </div>
   );
 }

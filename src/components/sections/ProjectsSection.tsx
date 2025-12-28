@@ -16,7 +16,6 @@ export function ProjectsSection() {
           </div>
         </div>
       </div>
-      <ScrollDown />
     </div>
   );
 }

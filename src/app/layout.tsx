@@ -3,8 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ryunosuke Yoda - Portfolio",
-  description: "Software Engineer Portfolio",
-  viewport: "width=device-width, initial-scale=1",
+  description: "Ryunosuke Yoda's Portfolio",
 };
 
 export default function RootLayout({
