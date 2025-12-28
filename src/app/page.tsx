@@ -229,21 +229,21 @@ export default function Home() {
                 <div className="mb-4">
                   <Image src="/takoyaki.png" alt="Project 1" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Project 1</h3>
-                <p className="text-base md:text-lg text-gray-400 mb-4">
-                  Description of the project goes here. This is a sample project card.
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">EarthRader</h3>
+                <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
+                EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">TypeScript</span>
                   <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Next.js</span>
-                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">React</span>
+                  <span className="px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded">Leaflet</span>
                 </div>
                 <div className="flex gap-4">
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+                  <a href="https://github.com/takoyakidath/earthradar" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
                     <Github size={20} />
                     <span className="text-sm">GitHub</span>
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
+                  <a href="https://earthrader.pkopko.jp" className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
                     <ExternalLink size={20} />
                     <span className="text-sm">Demo</span>
                   </a>
@@ -254,7 +254,7 @@ export default function Home() {
                   <Image src="/takoyaki.png" alt="Project 2" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-3">Project 2</h3>
-                <p className="text-base md:text-lg text-gray-400 mb-4">
+                <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
                   Description of the project goes here. This is a sample project card.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -278,7 +278,7 @@ export default function Home() {
                   <Image src="/takoyaki.png" alt="Project 3" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-3">Project 3</h3>
-                <p className="text-base md:text-lg text-gray-400 mb-4">
+                <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
                   Description of the project goes here. This is a sample project card.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -302,7 +302,7 @@ export default function Home() {
                   <Image src="/takoyaki.png" alt="Project 4" width={300} height={200} className="w-full h-48 object-cover rounded-lg" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-3">Project 4</h3>
-                <p className="text-base md:text-lg text-gray-400 mb-4">
+                <p className="text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden">
                   Description of the project goes here. This is a sample project card.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
