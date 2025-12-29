@@ -9,7 +9,7 @@ export function ProjectsSection() {
         <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">Projects</div>
         <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
         <div className="w-full max-w-6xl overflow-x-auto hidden-scrollbar">
-          <div className="flex gap-4 sm:gap-6 md:gap-8 pb-4 px-2 sm:px-4 justify-center">
+          <div className="flex gap-4 sm:gap-6 md:gap-8 pb-4 px-2 sm:px-4">
           {projects.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
