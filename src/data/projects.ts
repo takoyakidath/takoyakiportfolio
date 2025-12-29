@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: 'Triplewin',
     description:
       'EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.',
-    image: '/Triplewin.png',
+    image: '/triplewin.png',
     imageAlt: 'Triplewin',
     tags: ['Nextjs', 'Tailwindcss', 'Shadcn/ui'],
     githubUrl: 'https://github.com/takoyakidath/Triplewin',
