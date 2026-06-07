@@ -1,14 +1,10 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   theme: {
-    extend: {
-      fontFamily: {
-        "mochiy-pop": ['"Mochiy Pop One"', "sans-serif"],
-      },
-    },
+    extend: {},
   },
   plugins: [],
-}
+};
 
-export default config
+export default config;

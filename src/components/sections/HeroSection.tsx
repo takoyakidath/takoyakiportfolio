@@ -2,19 +2,15 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const NAME_TEXT = "Ryunosuke Yoda";
+const ROTATING = ["Software Engineer", "依田 隆之介"] as const;
+const PAUSE_MS_BY_INDEX: Record<number, number> = {
+  0: 1200,
+  1: 3000,
+};
+
 export function HeroSection() {
-  // 上（英語名）：一回だけタイプして固定
-  const nameText = "Ryunosuke Yoda";
   const [nameDisplayed, setNameDisplayed] = useState("");
-
-  // 下（切り替え）：0=肩書き, 1=漢字
-  const rotating = ["Software Engineer", "依田 隆之介"] as const;
-
-  // ✅漢字の表示時間だけ長くする（ms）
-  const pauseMsByIndex: Record<number, number> = {
-    0: 1200, // Software Engineer 側
-    1: 3000, // 依田隆之介 側（長め）
-  };
 
   const [rotIndex, setRotIndex] = useState(0);
   const [rotDisplayed, setRotDisplayed] = useState("");
@@ -22,10 +18,10 @@ export function HeroSection() {
 
   // ① 英語名を一回だけタイプ
   useEffect(() => {
-    if (nameDisplayed.length >= nameText.length) return;
+    if (nameDisplayed.length >= NAME_TEXT.length) return;
 
     const t = setTimeout(() => {
-      setNameDisplayed(nameText.slice(0, nameDisplayed.length + 1));
+      setNameDisplayed(NAME_TEXT.slice(0, nameDisplayed.length + 1));
     }, 90);
 
     return () => clearTimeout(t);
@@ -33,10 +29,10 @@ export function HeroSection() {
 
   // ② 下を切り替えタイプ（打つ→待つ→消す→次）
   useEffect(() => {
-    if (nameDisplayed.length < nameText.length) return;
+    if (nameDisplayed.length < NAME_TEXT.length) return;
 
-    const current = rotating[rotIndex];
-    const pauseMs = pauseMsByIndex[rotIndex] ?? 1200;
+    const current = ROTATING[rotIndex];
+    const pauseMs = PAUSE_MS_BY_INDEX[rotIndex] ?? 1200;
 
     const typeSpeed = 80;
     const deleteSpeed = 40;
@@ -62,7 +58,7 @@ export function HeroSection() {
 
         if (rotDisplayed.length <= 1) {
           setRotDeleting(false);
-          setRotIndex((p) => (p + 1) % rotating.length);
+          setRotIndex((p) => (p + 1) % ROTATING.length);
         }
       }, deleteSpeed);
     }
@@ -74,13 +70,20 @@ export function HeroSection() {
     <div className="relative h-screen px-4">
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 relative mb-4 sm:mb-6">
-          <Image src="/takoyaki.png" alt="Takoyaki Icon" fill className="object-contain" />
+          <Image
+            src="/takoyaki.png"
+            alt="Takoyaki Icon"
+            fill
+            className="object-contain"
+          />
         </div>
 
         {/* 上：英語名だけタイプ */}
         <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-center px-2">
           {nameDisplayed}
-          {nameDisplayed.length < nameText.length && <span className="animate-pulse">|</span>}
+          {nameDisplayed.length < NAME_TEXT.length && (
+            <span className="animate-pulse">|</span>
+          )}
         </div>
 
         {/* 下：肩書き⇄漢字 */}

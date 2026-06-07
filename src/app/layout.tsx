@@ -12,7 +12,10 @@ const personJsonLd = {
   url: siteUrl,
   image: siteUrl ? `${siteUrl}/takoyaki.png` : undefined,
   email: "mailto:takoyakidath@gmail.com",
-  sameAs: ["https://github.com/takoyakidath", "https://twitter.com/takoyakidath"],
+  sameAs: [
+    "https://github.com/takoyakidath",
+    "https://twitter.com/takoyakidath",
+  ],
 };
 
 export const metadata: Metadata = {
