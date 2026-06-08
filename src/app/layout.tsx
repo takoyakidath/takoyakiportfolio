@@ -35,12 +35,10 @@ export const metadata: Metadata = {
     "依田隆之介",
     "takoyakidath",
     "Fullstack Engineer",
-    "Software Engineer",
     "ポートフォリオ",
     "Portfolio",
     "Next.js",
-    "TypeScript",
-    "Kubernetes",
+
   ],
   authors: [{ name: "Ryunosuke Yoda", url: siteUrl }],
   creator: "Ryunosuke Yoda",
