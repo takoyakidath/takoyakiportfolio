@@ -3,10 +3,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const NAME_TEXT = "Ryunosuke Yoda";
-const ROTATING = ["Software Engineer", "依田 隆之介"] as const;
+const ROTATING = ["Software Engineer", "依田 隆之介","takoyakidath"] as const;
 const PAUSE_MS_BY_INDEX: Record<number, number> = {
   0: 1200,
   1: 3000,
+  2: 3000,
 };
 
 export function HeroSection() {
