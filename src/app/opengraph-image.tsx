@@ -18,23 +18,45 @@ export default async function Image() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
           justifyContent: "center",
+          padding: "0 96px",
           backgroundColor: "#111827",
           color: "#ffffff",
         }}
       >
-        <img
-          src={iconSrc}
-          width={200}
-          height={200}
-          style={{ borderRadius: "50%", marginBottom: 40 }}
-        />
-        <div style={{ display: "flex", fontSize: 72, fontWeight: 700 }}>
+        <div style={{ display: "flex", alignItems: "center", marginBottom: 28 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+          <img
+            src={iconSrc}
+            alt=""
+            width={88}
+            height={88}
+            style={{ borderRadius: "50%", marginRight: 24 }}
+          />
+          <div style={{ display: "flex", fontSize: 32, color: "#9ca3af" }}>
+            takoyakidath / Software Engineer
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            fontSize: 124,
+            fontWeight: 800,
+            lineHeight: 1.05,
+            letterSpacing: "-0.02em",
+          }}
+        >
           Ryunosuke Yoda
         </div>
-        <div style={{ display: "flex", fontSize: 36, color: "#9ca3af", marginTop: 16 }}>
-          Software Engineer / takoyakidath
+        <div
+          style={{
+            display: "flex",
+            fontSize: 38,
+            color: "#9ca3af",
+            marginTop: 28,
+          }}
+        >
+          Portfolio - Projects, Skills &amp; Career
         </div>
       </div>
     ),

@@ -19,13 +19,46 @@ const personJsonLd = {
   ],
 };
 
+const title = "Ryunosuke Yoda (依田隆之介) - Portfolio";
+const description =
+  "千葉県出身のフルスタックエンジニア・依田隆之介(Ryunosuke Yoda / takoyakidath)のポートフォリオサイト。Next.js・TypeScript・Kubernetesなどを用いた制作実績(EarthRader, Triplewin)やスキル、経歴を紹介しています。";
+
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
-  title: "Ryunosuke Yoda (依田隆之介) - Portfolio",
-  description: "Ryunosuke Yoda's Portfolio",
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  description,
+  keywords: [
+    "Ryunosuke Yoda",
+    "依田隆之介",
+    "takoyakidath",
+    "Fullstack Engineer",
+    "Software Engineer",
+    "ポートフォリオ",
+    "Portfolio",
+    "Next.js",
+    "TypeScript",
+    "Kubernetes",
+  ],
+  authors: [{ name: "Ryunosuke Yoda", url: siteUrl }],
+  creator: "Ryunosuke Yoda",
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
   openGraph: {
-    title: "Ryunosuke Yoda (依田隆之介) - Portfolio",
-    description: "Ryunosuke Yoda's Portfolio",
+    title,
+    description,
     url: siteUrl,
     siteName: "Ryunosuke Yoda - Portfolio",
     locale: "ja_JP",
@@ -33,8 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ryunosuke Yoda (依田隆之介) - Portfolio",
-    description: "Ryunosuke Yoda's Portfolio",
+    title,
+    description,
   },
 };
 
