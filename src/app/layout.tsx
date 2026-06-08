@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -35,6 +36,7 @@ export default function RootLayout({
           {JSON.stringify(personJsonLd)}
         </Script>
         {children}
+        <Analytics />
       </body>
     </html>
   );
