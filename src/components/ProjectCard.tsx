@@ -21,7 +21,7 @@ export function ProjectCard({
   demoUrl,
 }: ProjectCardProps) {
   return (
-    <div className="group relative p-4 sm:p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 shrink-0 w-[280px] sm:w-80 md:w-96 flex flex-col items-center">
+    <div className="group relative p-4 sm:p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 dark:hover:border-gray-300 transition-colors duration-300 shrink-0 w-[280px] sm:w-80 md:w-96 flex flex-col items-center">
       <div className="mb-4">
         <Image
           src={image}
@@ -41,7 +41,7 @@ export function ProjectCard({
         {tags.map((tag) => (
           <span
             key={tag}
-            className="px-2 sm:px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 rounded"
+            className="px-2 sm:px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200 rounded"
           >
             {tag}
           </span>
@@ -50,14 +50,14 @@ export function ProjectCard({
       <div className="flex gap-3 sm:gap-4 justify-center">
         <a
           href={githubUrl}
-          className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 transition-colors"
+          className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
         >
           <Github size={18} className="sm:w-5 sm:h-5" />
           <span className="text-xs sm:text-sm">GitHub</span>
         </a>
         <a
           href={demoUrl}
-          className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 transition-colors"
+          className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
         >
           <ExternalLink size={18} className="sm:w-5 sm:h-5" />
           <span className="text-xs sm:text-sm">Demo</span>
