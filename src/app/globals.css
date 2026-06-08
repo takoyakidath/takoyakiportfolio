@@ -10,3 +10,15 @@
     display: none;
   }
 }
+
+:root {
+  --skill-track: #e5e7eb;
+  --skill-progress: #4b5563;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --skill-track: #374151;
+    --skill-progress: #d1d5db;
+  }
+}
