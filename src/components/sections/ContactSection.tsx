@@ -36,9 +36,9 @@ export function ContactSection() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 group"
+              className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 dark:hover:border-gray-300 transition-colors duration-300 group"
             >
-              <Mail className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 transition-colors" />
+              <Mail className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" />
               <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
                 Email
               </span>
@@ -51,9 +51,9 @@ export function ContactSection() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 transition-colors duration-300 group"
+                  className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 dark:hover:border-gray-300 transition-colors duration-300 group"
                 >
-                  <Icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                  <Icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" />
                   <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
                     {link.name}
                   </span>
