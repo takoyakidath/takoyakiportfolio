@@ -20,8 +20,22 @@ const personJsonLd = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: siteUrl ? new URL(siteUrl) : undefined,
   title: "Ryunosuke Yoda (依田隆之介) - Portfolio",
   description: "Ryunosuke Yoda's Portfolio",
+  openGraph: {
+    title: "Ryunosuke Yoda (依田隆之介) - Portfolio",
+    description: "Ryunosuke Yoda's Portfolio",
+    url: siteUrl,
+    siteName: "Ryunosuke Yoda - Portfolio",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ryunosuke Yoda (依田隆之介) - Portfolio",
+    description: "Ryunosuke Yoda's Portfolio",
+  },
 };
 
 export default function RootLayout({
