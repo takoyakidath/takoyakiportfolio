@@ -23,28 +23,35 @@ export function CareerSection() {
           Career
         </div>
         <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
-        <div className="w-full max-w-3xl flex flex-col">
-          {career.map((item, index) => (
-            <div
-              key={`${item.date}-${item.text}`}
-              className="relative flex gap-4 sm:gap-6 pb-6 sm:pb-8 last:pb-0"
-            >
-              <div className="relative flex flex-col items-center">
-                <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gray-400 shrink-0"></div>
-                {index !== career.length - 1 && (
-                  <div className="w-0.5 flex-1 bg-gray-400 mt-1"></div>
-                )}
+        <div className="relative w-full max-w-3xl">
+          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gray-400 sm:-translate-x-1/2"></div>
+          {career.map((item, index) => {
+            const isLeft = index % 2 === 0;
+            return (
+              <div
+                key={`${item.date}-${item.text}`}
+                className={`relative flex pb-6 sm:pb-8 last:pb-0 ${
+                  isLeft ? "sm:justify-start" : "sm:justify-end"
+                }`}
+              >
+                <div className="absolute left-4 sm:left-1/2 top-1 w-3 h-3 sm:w-4 sm:h-4 -translate-x-1/2 rounded-full bg-gray-400 z-10"></div>
+                <div
+                  className={`pl-10 sm:pl-0 sm:w-[calc(50%-2rem)] flex flex-col gap-1 ${
+                    isLeft
+                      ? "sm:items-end sm:text-right sm:pr-8"
+                      : "sm:items-start sm:text-left sm:pl-8"
+                  }`}
+                >
+                  <span className="text-sm sm:text-base text-gray-400 font-medium">
+                    {item.date}
+                  </span>
+                  <span className="text-base sm:text-lg md:text-xl font-bold">
+                    {item.text}
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-col gap-1 -mt-1">
-                <span className="text-sm sm:text-base text-gray-400 font-medium">
-                  {item.date}
-                </span>
-                <span className="text-base sm:text-lg md:text-xl font-bold">
-                  {item.text}
-                </span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
