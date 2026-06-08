@@ -23,7 +23,7 @@ export function SkillProgressBar({ skill, percentage }: SkillProgressBarProps) {
             cy="50"
             r={CIRCLE_RADIUS}
             fill="none"
-            stroke="var(--skill-track)"
+            className="stroke-gray-200 dark:stroke-gray-700"
             strokeWidth="8"
           />
           <circle
@@ -31,7 +31,7 @@ export function SkillProgressBar({ skill, percentage }: SkillProgressBarProps) {
             cy="50"
             r={CIRCLE_RADIUS}
             fill="none"
-            stroke="var(--skill-progress)"
+            className="stroke-gray-600 dark:stroke-gray-300"
             strokeWidth="8"
             strokeDasharray={CIRCUMFERENCE}
             strokeDashoffset={strokeDashoffset}
