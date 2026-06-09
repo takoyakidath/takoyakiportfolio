@@ -7,6 +7,7 @@ export function ScrollDown() {
 
   useEffect(() => {
     const handler = () => setVisible(window.scrollY <= 50);
+    handler();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
@@ -18,9 +19,11 @@ export function ScrollDown() {
       }`}
     >
       <span className="text-xs font-bold mb-1">Scroll down</span>
-      <ChevronDown className="animate-chevron-fade" size={20} />
-      <ChevronDown className="animate-chevron-fade animation-delay-150 -mt-3" size={20} />
-      <ChevronDown className="animate-chevron-fade animation-delay-300 -mt-3" size={20} />
+      <div aria-hidden="true">
+        <ChevronDown className="animate-chevron-fade" size={20} />
+        <ChevronDown className="animate-chevron-fade animation-delay-150 -mt-3" size={20} />
+        <ChevronDown className="animate-chevron-fade animation-delay-300 -mt-3" size={20} />
+      </div>
     </div>
   );
 }
