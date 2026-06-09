@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -38,7 +39,6 @@ export const metadata: Metadata = {
     "ポートフォリオ",
     "Portfolio",
     "Next.js",
-
   ],
   authors: [{ name: "Ryunosuke Yoda", url: siteUrl }],
   creator: "Ryunosuke Yoda",
@@ -82,6 +82,7 @@ export default function RootLayout({
         </Script>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
