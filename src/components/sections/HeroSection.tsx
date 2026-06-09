@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { ScrollDown } from "@/components/ScrollDown";
 
 const NAME_TEXT = "Ryunosuke Yoda";
 const ROTATING = ["Software Engineer", "依田 隆之介","takoyakidath"] as const;
@@ -93,6 +94,7 @@ export function HeroSection() {
           <span className="animate-pulse">|</span>
         </div>
       </div>
+      <ScrollDown />
     </div>
   );
 }
