@@ -1,59 +1,146 @@
-const career = [
-  { date: "2010年10月5日", text: "誕生" },
-  { date: "2017年4月～2023年3月", text: "公立小学校在学" },
-  { date: "2023年4月～2026年3月", text: "公立中学校在学" },
-  { date: "2023年4月～2026年3月", text: "学校法人角川ドワンゴ学園N中等部在学" },
-  { date: "2023年4月～", text: "千葉県内の地域ボランティア団体に所属" },
-    { date: "2024年12月", text: "Qiita Advent Calendar 完走賞受賞" },
-  { date: "2025年4月～", text: "学生団体Nullerに所属" },
-  { date: "2025年4月～", text: "任意団体Uniprojectの役員に就任" },
-  { date: "2025年12月", text: "Qiita Advent Calendar 完走賞受賞" },
-  { date: "2026年4月", text: "ニコニコ超会議の磁石祭 ものづくり発表会登壇者" },
-  { date: "2025年10月", text: "学内プログラミングコンテスト 健闘賞受賞" },
-  { date: "2026年2月", text: "学内プログラミングコンテスト 優秀賞受賞" },
-  { date: "2026年4月", text: "ニコニコ超会議の磁石祭 ものづくり発表会MC" },
-  { date: "2026年4月～", text: "学校法人角川ドワンゴ学園N高等学校在学中" },
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+
+const recentCareer = [
+  {
+    date: "2026.04",
+    iso: "2026-04",
+    title: "N高等学校に入学",
+    detail: "学校法人角川ドワンゴ学園 N高等学校",
+    category: "EDUCATION",
+  },
+  {
+    date: "2026.04",
+    iso: "2026-04",
+    title: "磁石祭 ものづくり発表会 登壇・MC",
+    detail: "ニコニコ超会議で、ものづくりの楽しさを共有。",
+    category: "EVENT",
+  },
+  {
+    date: "2026.02",
+    iso: "2026-02",
+    title: "学内プログラミングコンテスト 優秀賞",
+    detail: "日々の学びを、ひとつの成果に。",
+    category: "AWARD",
+  },
+  {
+    date: "2025.12",
+    iso: "2025-12",
+    title: "Qiita Advent Calendar 完走賞",
+    detail: "2024年・2025年の2年連続で受賞。",
+    category: "WRITING",
+  },
 ];
+
+const earlierCareer = [
+  {
+    date: "2025.10",
+    iso: "2025-10",
+    title: "学内プログラミングコンテスト 健闘賞",
+    detail: "プログラミングへの挑戦。",
+    category: "AWARD",
+  },
+  {
+    date: "2025.04",
+    iso: "2025-04",
+    title: "学生団体Nullerに所属 / Uniproject役員に就任",
+    detail: "仲間とともに、活動の幅を広げる。",
+    category: "COMMUNITY",
+  },
+  {
+    date: "2024.12",
+    iso: "2024-12",
+    title: "Qiita Advent Calendar 完走賞",
+    detail: "技術の学びを記事として発信。",
+    category: "WRITING",
+  },
+  {
+    date: "2023.04",
+    iso: "2023-04",
+    title: "公立中学校・N中等部に入学",
+    detail: "2026年3月まで在学。地域ボランティア団体での活動も開始。",
+    category: "EDUCATION",
+  },
+  {
+    date: "2017.04",
+    iso: "2017-04",
+    title: "公立小学校に入学",
+    detail: "2023年3月まで在学。",
+    category: "EDUCATION",
+  },
+  {
+    date: "2010.10.05",
+    iso: "2010-10-05",
+    title: "千葉県で生まれる",
+    detail: "ここから、好奇心の旅がはじまる。",
+    category: "LIFE",
+  },
+];
+
+function CareerItem({ item }: { item: (typeof recentCareer)[number] }) {
+  return (
+    <li className="career-item">
+      <time dateTime={item.iso}>{item.date}</time>
+      <div className="career-content">
+        <span className="career-category">{item.category}</span>
+        <h3>{item.title}</h3>
+        <p>{item.detail}</p>
+      </div>
+      <ArrowUpRight size={19} aria-hidden="true" />
+    </li>
+  );
+}
 
 export function CareerSection() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16 py-12 sm:py-16">
-      <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-12 w-full max-w-7xl">
-        <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">
-          Career
+    <section
+      id="career"
+      className="career-section"
+      aria-labelledby="career-title"
+    >
+      <div className="container section">
+        <div className="section-label">
+          <span>04 / JOURNEY</span>
+          <span>一歩ずつ、その先へ。</span>
         </div>
-        <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
-        <div className="relative w-full max-w-3xl">
-          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gray-400 sm:-translate-x-1/2"></div>
-          {career.map((item, index) => {
-            const isLeft = index % 2 === 0;
-            return (
-              <div
-                key={`${item.date}-${item.text}`}
-                className={`relative flex pb-6 sm:pb-8 last:pb-0 ${
-                  isLeft ? "sm:justify-start" : "sm:justify-end"
-                }`}
-              >
-                <div className="absolute left-4 sm:left-1/2 top-1 w-3 h-3 sm:w-4 sm:h-4 -translate-x-1/2 rounded-full bg-gray-400 z-10"></div>
-                <div
-                  className={`pl-10 sm:pl-0 sm:w-[calc(50%-2rem)] flex flex-col gap-1 ${
-                    isLeft
-                      ? "sm:items-end sm:text-right sm:pr-8"
-                      : "sm:items-start sm:text-left sm:pl-8"
-                  }`}
-                >
-                  <span className="text-sm sm:text-base text-gray-400 font-medium">
-                    {item.date}
-                  </span>
-                  <span className="text-base sm:text-lg md:text-xl font-bold">
-                    {item.text}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
+        <div className="career-layout">
+          <div className="career-intro">
+            <h2 id="career-title" className="section-title" lang="en">
+              Still learning.
+              <br />
+              <em>Still growing.</em>
+            </h2>
+            <p className="section-description">
+              学ぶ、つくる、伝える。
+              <br />
+              小さな挑戦を積み重ねてきた記録。
+            </p>
+            <span className="journey-mark" aria-hidden="true">
+              ↗
+            </span>
+          </div>
+          <div>
+            <ol className="career-list">
+              {recentCareer.map((item) => (
+                <CareerItem key={`${item.date}-${item.title}`} item={item} />
+              ))}
+            </ol>
+            <details className="career-history">
+              <summary>
+                <span className="history-closed">
+                  これまでの歩みをもっと見る
+                </span>
+                <span className="history-open">これまでの歩みを閉じる</span>
+                <ArrowDown size={16} aria-hidden="true" />
+              </summary>
+              <ol className="career-list">
+                {earlierCareer.map((item) => (
+                  <CareerItem key={`${item.date}-${item.title}`} item={item} />
+                ))}
+              </ol>
+            </details>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

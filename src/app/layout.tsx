@@ -76,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+      <body>
         <Script id="person-jsonld" type="application/ld+json">
           {JSON.stringify(personJsonLd)}
         </Script>

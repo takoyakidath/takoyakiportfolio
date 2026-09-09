@@ -12,9 +12,10 @@ export const projects: Project[] = [
   {
     title: "EarthRader",
     description:
-      "EarthRader is a web application that provides real-time earthquake information in Japan. Built with Next.js and Leaflet, it offers a user-friendly interface to stay informed about seismic activities.",
+      "日本各地の地震情報を、ひと目でわかる地図に。Next.jsとLeafletで、震源・規模などの情報を直感的に確認できるWebアプリケーション。",
     image: "/earthrader.png",
-    imageAlt: "Earthrader",
+    imageAlt:
+      "EarthRaderの画面。日本地図上の震源と、地震の規模・深さを一覧で表示。",
     tags: ["TypeScript", "Next.js", "Leaflet"],
     githubUrl: "https://github.com/takoyakidath/earthradar",
     demoUrl: "https://earthrader.pkopko.jp",
@@ -22,10 +23,10 @@ export const projects: Project[] = [
   {
     title: "Triplewin",
     description:
-      "Triplewin is a web application built with Next.js, Tailwind CSS, and Shadcn/ui.",
+      "シンプルだからこそ、もう一度遊びたくなる。Next.js・Tailwind CSS・shadcn/uiでつくった、ブラウザで楽しめる三目並べゲーム。",
     image: "/triplewin.png",
-    imageAlt: "Triplewin",
-    tags: ["Nextjs", "Tailwindcss", "Shadcn/ui"],
+    imageAlt: "Triplewinの三目並べ。赤いコマが横一列に並んだゲーム画面。",
+    tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
     githubUrl: "https://github.com/takoyakidath/Triplewin",
     demoUrl: "https://triplewin.pkopko.jp",
   },

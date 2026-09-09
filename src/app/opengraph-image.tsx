@@ -11,55 +11,53 @@ export default async function Image() {
   const iconSrc = `data:image/png;base64,${icon.toString("base64")}`;
 
   return new ImageResponse(
-    (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          padding: "0 96px",
-          backgroundColor: "#111827",
-          color: "#ffffff",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", marginBottom: 28 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-          <img
-            src={iconSrc}
-            alt=""
-            width={88}
-            height={88}
-            style={{ borderRadius: "50%", marginRight: 24 }}
-          />
-          <div style={{ display: "flex", fontSize: 32, color: "#9ca3af" }}>
-            takoyakidath / Software Engineer
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            fontSize: 124,
-            fontWeight: 800,
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          Ryunosuke Yoda
-        </div>
-        <div
-          style={{
-            display: "flex",
-            fontSize: 38,
-            color: "#9ca3af",
-            marginTop: 28,
-          }}
-        >
-          Portfolio - Projects, Skills &amp; Career
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: "0 96px",
+        backgroundColor: "#f8f8f2",
+        color: "#242b25",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", marginBottom: 28 }}>
+        {/* biome-ignore lint/performance/noImgElement: ImageResponse renders a static image and requires native image elements. */}
+        <img
+          src={iconSrc}
+          alt=""
+          width={88}
+          height={88}
+          style={{ borderRadius: "50%", marginRight: 24 }}
+        />
+        <div style={{ display: "flex", fontSize: 26, color: "#646a61" }}>
+          takoyakidath / Software Engineer
         </div>
       </div>
-    ),
+      <div
+        style={{
+          display: "flex",
+          fontSize: 98,
+          fontWeight: 600,
+          lineHeight: 1.05,
+          letterSpacing: "-0.02em",
+        }}
+      >
+        Ryunosuke Yoda
+      </div>
+      <div
+        style={{
+          display: "flex",
+          fontSize: 38,
+          color: "#315841",
+          marginTop: 28,
+        }}
+      >
+        Turning curiosity into creation.
+      </div>
+    </div>,
     { ...size },
   );
 }

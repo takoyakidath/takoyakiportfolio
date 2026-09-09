@@ -11,3 +11,21 @@ export const skills: Skill[] = [
   { name: "Python", percentage: 0.3 },
   { name: "React Native", percentage: 0.5 },
 ];
+
+export const skillGroups = [
+  {
+    title: "Frontend",
+    description: "アイデアを、触れられる体験に。",
+    skills: ["TypeScript", "Next.js", "Tailwind CSS", "shadcn/ui"],
+  },
+  {
+    title: "Infrastructure",
+    description: "サービスを支える、確かな土台。",
+    skills: ["Linux", "Kubernetes"],
+  },
+  {
+    title: "Exploring",
+    description: "次のものづくりへ、学びを広げる。",
+    skills: ["Python", "React Native"],
+  },
+];

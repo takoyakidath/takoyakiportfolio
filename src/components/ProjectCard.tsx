@@ -1,15 +1,6 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import Image from "next/image";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  tags: string[];
-  githubUrl: string;
-  demoUrl: string;
-}
+import type { Project } from "@/data/projects";
 
 export function ProjectCard({
   title,
@@ -19,50 +10,74 @@ export function ProjectCard({
   tags,
   githubUrl,
   demoUrl,
-}: ProjectCardProps) {
+  index,
+}: Project & { index: number }) {
   return (
-    <div className="group relative p-4 sm:p-6 md:p-8 border-2 border-gray-400 rounded-lg hover:border-gray-600 dark:hover:border-gray-300 transition-colors duration-300 shrink-0 w-[280px] sm:w-80 md:w-96 flex flex-col items-center">
-      <div className="mb-4">
-        <Image
-          src={image}
-          alt={imageAlt}
-          width={300}
-          height={200}
-          className="w-full h-40 sm:h-48 object-cover rounded-lg"
-        />
-      </div>
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-center">
-        {title}
-      </h3>
-      <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 break-words overflow-hidden text-center">
-        {description}
-      </p>
-      <div className="flex flex-wrap gap-2 mb-4 justify-center">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="px-2 sm:px-3 py-1 text-xs md:text-sm bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200 rounded"
-          >
-            {tag}
+    <article className={`project-card project-${index + 1}`}>
+      <a
+        href={demoUrl}
+        className="project-preview"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${title} のデモを新しいタブで開く`}
+      >
+        <div className="project-preview-label">
+          <span>
+            {String(index + 1).padStart(2, "0")} /{" "}
+            {index === 0 ? "WEB APPLICATION" : "WEB GAME"}
           </span>
-        ))}
+          <ArrowUpRight size={20} aria-hidden="true" />
+        </div>
+        <div className="project-image-frame">
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            sizes="(max-width: 700px) 85vw, (max-width: 1200px) 40vw, 460px"
+            className="project-image"
+          />
+        </div>
+        <span className="preview-caption">
+          {index === 0
+            ? "Stay informed. Stay aware."
+            : "A simple game. A little strategy."}
+        </span>
+        <span className="preview-hover">
+          デモを開く <ArrowUpRight size={18} aria-hidden="true" />
+        </span>
+      </a>
+      <div className="project-info">
+        <div className="project-title-row">
+          <h3>{title}</h3>
+          <span>PERSONAL PROJECT</span>
+        </div>
+        <p>{description}</p>
+        <ul className="tags" aria-label="使用技術">
+          {tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
+        <div className="project-links">
+          <a
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            Live demo <ArrowUpRight size={16} aria-hidden="true" />
+            <span className="sr-only">（新しいタブで開く）</span>
+          </a>
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+          >
+            <Github size={16} aria-hidden="true" /> Source code
+            <span className="sr-only">（新しいタブで開く）</span>
+          </a>
+        </div>
       </div>
-      <div className="flex gap-3 sm:gap-4 justify-center">
-        <a
-          href={githubUrl}
-          className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-        >
-          <Github size={18} className="sm:w-5 sm:h-5" />
-          <span className="text-xs sm:text-sm">GitHub</span>
-        </a>
-        <a
-          href={demoUrl}
-          className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-        >
-          <ExternalLink size={18} className="sm:w-5 sm:h-5" />
-          <span className="text-xs sm:text-sm">Demo</span>
-        </a>
-      </div>
-    </div>
+    </article>
   );
 }

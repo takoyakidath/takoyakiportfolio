@@ -1,73 +1,88 @@
-import { Github, Mail, Twitter } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Asterisk, Github } from "lucide-react";
+import { CopyEmailButton } from "@/components/CopyEmailButton";
 
-const CONTACT_EMAIL = "takoyakidath@gmail.com";
-
-interface ContactLink {
-  name: string;
-  url: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
-
-const contactLinks: ContactLink[] = [
-  {
-    name: "GitHub",
-    url: "https://github.com/takoyakidath",
-    icon: Github,
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/takoyakidath",
-    icon: Twitter,
-  },
-];
+const email = "takoyakidath@gmail.com";
 
 export function ContactSection() {
   return (
-    <div className="relative h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16">
-      <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-12 w-full max-w-7xl">
-        <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">
-          Contact
+    <section
+      id="contact"
+      className="contact-section"
+      aria-labelledby="contact-title"
+    >
+      <div className="container">
+        <div className="section-label">
+          <span>05 / SAY HELLO</span>
+          <span>次のアイデアは、会話から。</span>
         </div>
-        <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
-        <div className="flex flex-col items-center gap-4 sm:gap-6 md:gap-8">
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 text-center px-4">
-            Let's get in touch!
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+        <div className="contact-heading">
+          <h2 id="contact-title" lang="en">
+            Let’s make
+            <br />
+            <em>something great.</em>
+          </h2>
+          <Asterisk
+            className="contact-asterisk"
+            strokeWidth={1}
+            aria-hidden="true"
+          />
+        </div>
+        <div className="contact-bottom">
+          <div>
+            <p>
+              制作のご相談、技術のお話、ちょっとしたご挨拶も。
+              <br />
+              気軽に声をかけてください。
+            </p>
+            <div className="email-row">
+              <a href={`mailto:${email}`} className="email-link">
+                {email}
+                <ArrowUpRight size={25} aria-hidden="true" />
+              </a>
+              <CopyEmailButton email={email} />
+            </div>
+          </div>
+          <div className="social-links">
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 dark:hover:border-gray-300 transition-colors duration-300 group"
+              href="https://github.com/takoyakidath"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Mail className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" />
-              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
-                Email
-              </span>
+              <Github size={17} aria-hidden="true" /> GitHub{" "}
+              <ArrowUpRight size={16} aria-hidden="true" />
+              <span className="sr-only">（新しいタブで開く）</span>
             </a>
-            {contactLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 sm:gap-3 p-3 sm:p-4 md:p-6 border-2 border-gray-400 rounded-lg hover:border-gray-600 dark:hover:border-gray-300 transition-colors duration-300 group"
-                >
-                  <Icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" />
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
-                    {link.name}
-                  </span>
-                </a>
-              );
-            })}
+            <a
+              href="https://twitter.com/takoyakidath"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="x-icon" aria-hidden="true">
+                𝕏
+              </span>{" "}
+              X / Twitter <ArrowUpRight size={16} aria-hidden="true" />
+              <span className="sr-only">（新しいタブで開く）</span>
+            </a>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center font-bold px-4">
-        <div className="text-[10px] sm:text-xs text-center">
-          Copyright © 2025 Ryunosuke Yoda. All rights reserved.
-        </div>
+    </section>
+  );
+}
+
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div className="container footer-inner">
+        <a href="#home" className="footer-wordmark" aria-label="トップへ">
+          ry.
+        </a>
+        <p>© {new Date().getFullYear()} Ryunosuke Yoda</p>
+        <span>Built with curiosity, in Japan.</span>
+        <a href="#home" className="back-to-top">
+          BACK TO TOP <ArrowUp size={16} aria-hidden="true" />
+        </a>
       </div>
-    </div>
+    </footer>
   );
 }

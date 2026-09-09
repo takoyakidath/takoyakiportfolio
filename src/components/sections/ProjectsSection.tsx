@@ -1,22 +1,39 @@
+import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "../ProjectCard";
 
 export function ProjectsSection() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-2 sm:px-4 md:px-8 lg:px-16">
-      <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-12 w-full max-w-7xl">
-        <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">
-          Projects
+    <section
+      id="projects"
+      className="projects-section"
+      aria-labelledby="projects-title"
+    >
+      <div className="container section">
+        <div className="section-label">
+          <span>02 / SELECTED WORK</span>
+          <span>アイデアを、かたちに。</span>
         </div>
-        <div className="w-full max-w-4xl border-b-2 border-gray-400"></div>
-        <div className="w-full max-w-6xl overflow-x-auto hidden-scrollbar">
-          <div className="flex gap-4 sm:gap-6 md:gap-8 pb-4 px-2 sm:px-4">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
-          </div>
+        <div className="section-heading">
+          <h2 id="projects-title" className="section-title" lang="en">
+            Made with <em>curiosity.</em>
+          </h2>
+          <a
+            className="text-link"
+            href="https://github.com/takoyakidath?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            すべてのリポジトリ <ArrowUpRight size={17} aria-hidden="true" />
+            <span className="sr-only">（新しいタブで開く）</span>
+          </a>
+        </div>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.title} {...project} index={index} />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

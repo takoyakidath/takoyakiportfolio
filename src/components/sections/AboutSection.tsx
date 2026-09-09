@@ -1,21 +1,65 @@
+import { ArrowUpRight, Code2, HeartHandshake, MapPin } from "lucide-react";
+import Image from "next/image";
+
 export function AboutSection() {
   return (
-    <div className="relative h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16">
-      <div className="flex flex-col md:flex-row items-start md:items-center gap-6 sm:gap-8 md:gap-16 lg:gap-24 max-w-7xl">
-        <div className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold">
-          About me
-        </div>
-        <div className="relative flex flex-col gap-3 sm:gap-4 md:gap-6 text-base sm:text-lg md:text-xl lg:text-2xl pl-5 sm:pl-6 md:pl-8">
-          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-400"></div>
-          <div className="text-sm sm:text-base">Takoyakidath</div>
-          <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold -mt-4 sm:-mt-5 md:-mt-6">
-            Ryunosuke Yoda
+    <section
+      id="about"
+      className="section container about-section"
+      aria-labelledby="about-title"
+    >
+      <div className="section-label">
+        <span>01 / ABOUT</span>
+        <span>少しだけ、自己紹介。</span>
+      </div>
+      <div className="about-grid">
+        <div>
+          <h2 id="about-title" className="section-title" lang="en">
+            A curious mind.
+            <br />
+            <em>A builder at heart.</em>
+          </h2>
+          <div className="profile-signature">
+            <Image
+              src="/takoyaki.png"
+              alt="たこやきのプロフィールアイコン"
+              width={54}
+              height={54}
+            />
+            <div>
+              <span>Ryunosuke Yoda</span>
+              <span>@takoyakidath</span>
+            </div>
           </div>
-          <div>Fullstack Engineer</div>
-          <div>From: Chiba Japan</div>
-          <div>Born: October 5th, 2010</div>
+        </div>
+        <div className="about-copy">
+          <p className="about-lead">
+            仕組みを知ること。手を動かすこと。
+            <br />
+            その先に、誰かの役に立つものを。
+          </p>
+          <p>
+            千葉県出身の依田隆之介です。N高等学校で学びながら、Next.js・TypeScriptを使ったWebアプリケーションから、Linux・Kubernetesを使ったインフラまで、幅広い技術に触れています。
+          </p>
+          <p>
+            個人開発だけでなく、学生団体や地域のボランティアにも参加。人とつながり、アイデアを交わしながら、自分にできることを少しずつ広げています。
+          </p>
+          <div className="about-facts">
+            <span>
+              <MapPin size={15} aria-hidden="true" /> Chiba, Japan
+            </span>
+            <span>
+              <Code2 size={15} aria-hidden="true" /> Fullstack Engineer
+            </span>
+            <span>
+              <HeartHandshake size={15} aria-hidden="true" /> Community minded
+            </span>
+          </div>
+          <a href="#career" className="text-link">
+            これまでの歩み <ArrowUpRight size={17} aria-hidden="true" />
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

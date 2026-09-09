@@ -21,8 +21,14 @@ export function ScrollDown() {
       <span className="text-xs font-bold mb-1">Scroll down</span>
       <div aria-hidden="true">
         <ChevronDown className="animate-chevron-fade" size={20} />
-        <ChevronDown className="animate-chevron-fade animation-delay-150 -mt-3" size={20} />
-        <ChevronDown className="animate-chevron-fade animation-delay-300 -mt-3" size={20} />
+        <ChevronDown
+          className="animate-chevron-fade animation-delay-150 -mt-3"
+          size={20}
+        />
+        <ChevronDown
+          className="animate-chevron-fade animation-delay-300 -mt-3"
+          size={20}
+        />
       </div>
     </div>
   );
