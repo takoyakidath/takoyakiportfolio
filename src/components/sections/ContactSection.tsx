@@ -1,6 +1,6 @@
 import { Github, Mail, Twitter } from "lucide-react";
 
-const CONTACT_EMAIL = "takoyakidath@gmail.com";
+const CONTACT_EMAIL = "tako@octo.jp";
 
 interface ContactLink {
   name: string;

@@ -13,7 +13,7 @@ const personJsonLd = {
   jobTitle: "Software Engineer",
   url: siteUrl,
   image: siteUrl ? `${siteUrl}/takoyaki.png` : undefined,
-  email: "mailto:takoyakidath@gmail.com",
+  email: "mailto:tako@octo.jp",
   sameAs: [
     "https://github.com/takoyakidath",
     "https://twitter.com/takoyakidath",
