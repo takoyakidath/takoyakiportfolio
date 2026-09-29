@@ -8,7 +8,7 @@ interface ProjectCardProps {
   imageAlt: string;
   tags: string[];
   githubUrl: string;
-  demoUrl: string;
+  demoUrl?: string;
 }
 
 export function ProjectCard({
@@ -55,13 +55,15 @@ export function ProjectCard({
           <Github size={18} className="sm:w-5 sm:h-5" />
           <span className="text-xs sm:text-sm">GitHub</span>
         </a>
-        <a
-          href={demoUrl}
-          className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-        >
-          <ExternalLink size={18} className="sm:w-5 sm:h-5" />
-          <span className="text-xs sm:text-sm">Demo</span>
-        </a>
+        {demoUrl && (
+          <a
+            href={demoUrl}
+            className="flex items-center gap-1.5 sm:gap-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+          >
+            <ExternalLink size={18} className="sm:w-5 sm:h-5" />
+            <span className="text-xs sm:text-sm">Demo</span>
+          </a>
+        )}
       </div>
     </div>
   );
