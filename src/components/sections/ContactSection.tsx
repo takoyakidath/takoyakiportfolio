@@ -65,7 +65,7 @@ export function ContactSection() {
       </div>
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center font-bold px-4">
         <div className="text-[10px] sm:text-xs text-center">
-          Copyright © 2025 Ryunosuke Yoda. All rights reserved.
+          Copyright © 2025 takoyakidath. All rights reserved.
         </div>
       </div>
     </div>

@@ -3,8 +3,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ScrollDown } from "@/components/ScrollDown";
 
-const NAME_TEXT = "Ryunosuke Yoda";
-const ROTATING = ["Software Engineer", "依田 隆之介","takoyakidath"] as const;
+const NAME_TEXT = "takoyakidath";
+const ROTATING = ["Software Engineer", "Fullstack Engineer", "Portfolio"] as const;
 const PAUSE_MS_BY_INDEX: Record<number, number> = {
   0: 1200,
   1: 3000,
