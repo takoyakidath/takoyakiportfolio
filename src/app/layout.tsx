@@ -8,8 +8,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Ryunosuke Yoda",
-  alternateName: "依田 隆之介",
+  name: "takoyakidath",
   jobTitle: "Software Engineer",
   url: siteUrl,
   image: siteUrl ? `${siteUrl}/takoyaki.png` : undefined,
@@ -20,9 +19,9 @@ const personJsonLd = {
   ],
 };
 
-const title = "Ryunosuke Yoda (依田隆之介) - Portfolio";
+const title = "takoyakidath - Portfolio";
 const description =
-  "千葉県出身のフルスタックエンジニア・依田隆之介(Ryunosuke Yoda / takoyakidath)のポートフォリオサイト。Next.js・TypeScript・Kubernetesなどを用いた制作実績(EarthRader, Triplewin)やスキル、経歴を紹介しています。";
+  "千葉県出身のフルスタックエンジニア takoyakidath のポートフォリオサイト。Next.js・TypeScript・Kubernetesなどを用いた制作実績(EarthRader, Triplewin)やスキル、経歴を紹介しています。";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
@@ -32,16 +31,14 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    "Ryunosuke Yoda",
-    "依田隆之介",
     "takoyakidath",
     "Fullstack Engineer",
     "ポートフォリオ",
     "Portfolio",
     "Next.js",
   ],
-  authors: [{ name: "Ryunosuke Yoda", url: siteUrl }],
-  creator: "Ryunosuke Yoda",
+  authors: [{ name: "takoyakidath", url: siteUrl }],
+  creator: "takoyakidath",
   alternates: {
     canonical: siteUrl,
   },
@@ -58,7 +55,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: siteUrl,
-    siteName: "Ryunosuke Yoda - Portfolio",
+    siteName: "takoyakidath - Portfolio",
     locale: "ja_JP",
     type: "website",
   },
